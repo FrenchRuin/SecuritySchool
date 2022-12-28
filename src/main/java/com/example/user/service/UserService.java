@@ -24,12 +24,12 @@ public class UserService {
     private final SchoolRepository schoolRepository;
     private final UserRepository userRepository;
 
-    public void save(User user)throws DataIntegrityViolationException {
+    public User save(User user)throws DataIntegrityViolationException {
         if (user.getUserId() == null) {
             user.setCreated(LocalDateTime.now());
         }
         user.setUpdated(LocalDateTime.now());
-        userRepository.save(user);
+        return userRepository.save(user);
     }
 
     public Optional<User> findUser(Long userId) {
