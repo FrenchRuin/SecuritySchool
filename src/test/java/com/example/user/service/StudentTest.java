@@ -1,6 +1,8 @@
-package com.example.user.service.helper;
+package com.example.user.service;
 
 import com.example.user.domain.User;
+import com.example.user.service.helper.UserTestHelper;
+import com.example.user.service.helper.WithUserTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -10,7 +12,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import java.util.List;
 
 @DataJpaTest
-public class StudentTest extends WithUserTest{
+public class StudentTest extends WithUserTest {
 
     User teacher;
     User student;
