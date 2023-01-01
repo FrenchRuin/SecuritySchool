@@ -1,6 +1,5 @@
 package com.example;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -17,12 +16,17 @@ public class PaperUserTestApp {
 
 
     @Configuration
-    @ComponentScan("com.example.user")
+    @ComponentScan(basePackages = {
+            "com.example.user",
+            "com.example.paper"
+    })
     @EnableJpaRepositories(basePackages = {
-            "com.example.user.repository"
+            "com.example.user.repository",
+            "com.example.paper.repository"
     })
     @EntityScan(basePackages = {
-            "com.example.user.domain"
+            "com.example.user.domain",
+            "com.example.paper.domain"
     })
     class Config{
 

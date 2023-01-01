@@ -18,6 +18,7 @@ import java.util.stream.IntStream;
 @Transactional
 @RequiredArgsConstructor
 public class PaperTemplateService {
+
     private final PaperTemplateRepository paperTemplateRepository;
     private final ProblemService problemService;
 
